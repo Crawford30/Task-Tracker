@@ -4,6 +4,8 @@
 
      <Header title = "Task Tracker" />
 
+     <Tasks :tasks="tasks" /> <!--v bind tasks-->
+
   </div>
 </template>
 
@@ -11,14 +13,58 @@
 
 
 import Header from './components/Header'
+import Tasks from './components/Tasks'
 
 
 export default {
   name: 'App',
   components: {
 
-    Header
+    Header,
+    Tasks
     
+  },
+
+
+  data() {
+    return {
+      tasks: []
+
+    }
+  },
+
+  //====life cycle method to handle data eg http request
+  created() {
+
+    this.tasks = [
+      {
+        id: 1,
+        text: "Doctor's appointment",
+        day: "1 March 2021 at 2:30pm",
+        reminder: true
+
+
+      },
+
+      {
+        id: 2,
+        text: "Appointment",
+        day: "1 April 2021 at 2:30pm",
+        reminder: true
+
+
+      },
+
+      {
+        id: 3,
+        text: "Doctor's appointment",
+        day: "1 March 2021 at 2:30pm",
+        reminder: true
+
+
+      },
+    ]
+
   }
 }
 </script>
