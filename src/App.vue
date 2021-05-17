@@ -59,7 +59,7 @@ export default {
         id: 3,
         text: "Doctor's appointment",
         day: "1 March 2021 at 2:30pm",
-        reminder: true
+        reminder: false
 
 
       },
